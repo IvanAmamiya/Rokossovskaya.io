@@ -21,9 +21,9 @@ export default defineConfig({
       },
       includeAssets: ['logo.png'],
       manifest: {
-        name: 'Portfolio',
-        short_name: 'Portfolio',
-        description: 'Personal Portfolio',
+        name: 'ポットフォリオ',
+        short_name: 'ポットフォリオ',
+        description: '李 微奇のポットフォリオ',
         icons: [
           {
             src: 'logo.png',
