@@ -58,12 +58,12 @@ const GitProfile = ({ config }) => {
       .get(`https://api.github.com/users/${sanitizedConfig.github.username}`)
       .then((response) => {
         let data = response.data;
-
+        console.log(data)
         let profileData = {
           avatar: data.avatar_url,
-          name: data.name ? data.name : '',
-          bio: data.bio ? data.bio : '',
-          location: data.location ? data.location : '',
+          name: data.name ? data.name : 'Rokossovskaya',
+          bio: data.bio ? data.bio : 'Front-End Developer',
+          location: data.location ? data.location : 'Chiba,Japan',
           company: data.company ? data.company : '',
         };
 
@@ -197,7 +197,7 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                    <ExternalProject
+                      <ExternalProject
                         loading={loading}
                         externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
