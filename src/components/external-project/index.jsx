@@ -71,9 +71,9 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
       <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
+        className="card shadow-lg compact bg-base-100"
         key={index}
-        href={item.link}
+        /*         href={item.link}
         onClick={(e) => {
           e.preventDefault();
 
@@ -92,6 +92,7 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
 
           window?.open(item.link, '_blank');
         }}
+ */
       >
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
