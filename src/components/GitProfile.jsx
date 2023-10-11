@@ -58,7 +58,6 @@ const GitProfile = ({ config }) => {
       .get(`https://api.github.com/users/${sanitizedConfig.github.username}`)
       .then((response) => {
         let data = response.data;
-        console.log(data)
         let profileData = {
           avatar: data.avatar_url,
           name: data.name ? data.name : 'Rokossovskaya',
