@@ -3,6 +3,7 @@ import { Fragment, useCallback, useEffect, useState } from 'react';
 import HeadTagEditor from './head-tag-editor';
 import ErrorPage from './error-page';
 import ThemeChanger from './theme-changer';
+import LanguageChanger from './language-changer';
 import AvatarCard from './avatar-card';
 import Details from './details';
 import Skill from './skill';
@@ -15,6 +16,7 @@ import Footer from './footer';
 import {
   genericError,
   getInitialTheme,
+  getInitialLanguage,
   noConfigError,
   notFoundError,
   setupHotjar,
@@ -40,11 +42,14 @@ const GitProfile = ({ config }) => {
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
+  const [language,setLanguage] = useState(null)
 
   useEffect(() => {
     if (sanitizedConfig) {
       setTheme(getInitialTheme(sanitizedConfig.themeConfig));
       setupHotjar(sanitizedConfig.hotjar);
+      setLanguage(getInitialLanguage(sanitizedConfig.languageConfig))
+      console.log(sanitizedConfig)
       loadData();
     }
   }, [sanitizedConfig]);
@@ -52,6 +57,9 @@ const GitProfile = ({ config }) => {
   useEffect(() => {
     theme && document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+  useEffect(() => {
+    
+  }, [language]);
 
   const loadData = useCallback(() => {
     axios
@@ -131,7 +139,6 @@ const GitProfile = ({ config }) => {
       setError(genericError);
     }
   };
-
   return (
     <HelmetProvider>
       {sanitizedConfig && (
@@ -170,6 +177,14 @@ const GitProfile = ({ config }) => {
                         avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
                         resume={sanitizedConfig.resume}
                       />
+                      {!sanitizedConfig.themeConfig.disableSwitch && (
+                        <LanguageChanger
+                          language={language}
+                          setLanguage={setLanguage}
+                          loading={loading}
+                          languageConfig={sanitizedConfig.languageConfig}
+                        />
+                      )}
                       <Details
                         profile={profile}
                         loading={loading}
@@ -324,6 +339,11 @@ GitProfile.propTypes = {
         '--rounded-btn': PropTypes.string,
       }),
     }),
+    languageConfig: PropTypes.shape({
+      defaultLanguage: PropTypes.string,
+      languages: PropTypes.array,
+    }),
+
     footer: PropTypes.string,
   }).isRequired,
 };

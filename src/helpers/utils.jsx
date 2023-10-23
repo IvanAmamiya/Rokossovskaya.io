@@ -25,7 +25,32 @@ export const getInitialTheme = (themeConfig) => {
 
   return themeConfig.defaultTheme;
 };
+export const getInitialLanguage = (languageConfig) => {
+/* todo:initialize
+ */
+/*   if (themeConfig.disableSwitch) {
+    return themeConfig.defaultTheme;
+  }
 
+ */  /* if (
+    typeof window !== 'undefined' &&
+    !(localStorage.getItem('gitprofile-theme') === null) &&
+    themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
+  ) {
+    let theme = localStorage.getItem('gitprofile-theme');
+
+    return theme;
+  }
+
+  if (themeConfig.respectPrefersColorScheme && !themeConfig.disableSwitch) {
+    return typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : themeConfig.defaultTheme;
+  }
+ */
+  return languageConfig.defaultLanguage;
+};
 export const skeleton = ({
   width = null,
   height = null,
@@ -100,7 +125,11 @@ export const sanitizeConfig = (config) => {
     '--rounded-box': '3rem',
     '--rounded-btn': '3rem',
   };
-
+  const languages = config?.languageConfig?.languages || [
+    'English',
+    'Chinese',
+    'Japanese',
+  ];
   const themes = config?.themeConfig?.themes || [
     'light',
     'dark',
@@ -190,6 +219,10 @@ export const sanitizeConfig = (config) => {
       hideAvatarRing: config?.themeConfig?.hideAvatarRing || false,
       themes: themes,
       customTheme: customTheme,
+    },
+    languageConfig:{
+      defaultLanguage: config?.languageConfig?.defaultLanguage || languages[0],
+      languages: languages
     },
     footer: config?.footer,
   };

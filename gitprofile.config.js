@@ -169,7 +169,6 @@ const config = {
       'winter',
       'procyon',
     ],
-
     // Custom theme
     customTheme: {
       primary: '#fc055b',
@@ -180,6 +179,15 @@ const config = {
       '--rounded-box': '3rem',
       '--rounded-btn': '3rem',
     },
+    languageConfig: {
+      defaultLanguage: 'English',
+      // Available language. To remove any theme, exclude from here.
+      languages: [
+        'English',
+        'Chinese',
+        'Japanese',
+      ],
+    },  
   },
 
 /*   // Optional Footer. Supports plain text or HTML.
