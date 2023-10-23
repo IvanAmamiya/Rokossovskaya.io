@@ -28,10 +28,12 @@ import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
 import ExternalProject from './external-project';
+import { useTranslation } from "react-i18next";
 
 const bgColor = 'bg-base-300';
 
 const GitProfile = ({ config }) => {
+  const { t } = useTranslation();
   const [error, setError] = useState(
     typeof config === 'undefined' && !config ? noConfigError : null
   );
@@ -177,6 +179,7 @@ const GitProfile = ({ config }) => {
                         avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
                         resume={sanitizedConfig.resume}
                       />
+                      {t("app_name")}
                       {!sanitizedConfig.themeConfig.disableSwitch && (
                         <LanguageChanger
                           language={language}
