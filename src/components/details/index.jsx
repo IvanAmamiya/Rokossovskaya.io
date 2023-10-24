@@ -23,6 +23,7 @@ import {
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
+import { useTranslation } from 'react-i18next';
 
 const isCompanyMention = (company) => {
   return company.startsWith('@') && !company.includes(' ');
@@ -68,6 +69,7 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
 };
 
 const Details = ({ profile, loading, social, github }) => {
+  const { t, i18n } = useTranslation();
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 4; index++) {
@@ -96,7 +98,7 @@ const Details = ({ profile, loading, social, github }) => {
               {profile.location && (
                 <ListItem
                   icon={<MdLocationOn />}
-                  title="Based in:"
+                  title={t("based_in")}
                   value={profile.location}
                 />
               )}

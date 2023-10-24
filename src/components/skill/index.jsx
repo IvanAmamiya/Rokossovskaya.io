@@ -1,7 +1,9 @@
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 const Skill = ({ loading, skills }) => {
+  const { t, i18n } = useTranslation();
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 12; index++) {
@@ -26,7 +28,7 @@ const Skill = ({ loading, skills }) => {
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
                   <span className="text-base-content opacity-70">
-                    Tech Stack
+                    {t("tech_stack")}
                   </span>
                 )}
               </h5>

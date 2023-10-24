@@ -2,5 +2,13 @@
     "app_name":"test",
     "theme_style":"Theme",
     "change_theme":"Change Theme",
-    "download_resume":"DOWNLOAD RESUME"
+    "download_resume":"DOWNLOAD RESUME",
+    "my_projects":"My Projects",
+    "github_projects":"Github Projects",
+    "tech_stack":"Tech Stack",
+    "experience":"Experience",
+    "education":"Education",
+    "certification":"Certification",
+    "see_all":"See all",
+    "based_in":"Based in"
 }

@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
+import { useTranslation } from 'react-i18next';
 
 const displaySection = (externalProjects) => {
   if (
@@ -16,6 +17,7 @@ const displaySection = (externalProjects) => {
 };
 
 const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
+  const { t, i18n } = useTranslation();
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < externalProjects.length; index++) {
@@ -143,7 +145,7 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                         skeleton({ width: 'w-40', height: 'h-8' })
                       ) : (
                         <span className="text-base-content opacity-70">
-                          My Projects
+                          {t("my_projects")}
                         </span>
                       )}
                     </h5>

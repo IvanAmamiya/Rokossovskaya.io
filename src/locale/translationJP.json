@@ -2,5 +2,13 @@
     "app_name":"テスト",
     "theme_style":"スタイル",
     "change_theme":"スタイルを変える",
-    "download_resume":"レジュメをダウンロード"
+    "download_resume":"レジュメをダウンロード",
+    "my_projects":"プロジェクト経験",
+    "github_projects":"Github プロジェクトス",
+    "tech_stack":"技術スタック",
+    "experience":"経験",
+    "education":"教育キャリア",
+    "certification":"認証",
+    "see_all":"全て",
+    "based_in":"住所"
 }

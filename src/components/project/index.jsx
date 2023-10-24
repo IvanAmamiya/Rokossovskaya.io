@@ -3,8 +3,11 @@ import { Fragment } from 'react';
 import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
 import { MdInsertLink } from 'react-icons/md';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
+import { useTranslation } from 'react-i18next';
+
 
 const Project = ({ repo, loading, github, googleAnalytics }) => {
+  const { t, i18n } = useTranslation();
   if (!loading && Array.isArray(repo) && repo.length === 0) {
     return <></>;
   }
@@ -135,7 +138,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       skeleton({ width: 'w-40', height: 'h-8' })
                     ) : (
                       <span className="text-base-content opacity-70">
-                        GitHub Projects
+                        {t("github_projects")}
                       </span>
                     )}
                   </h5>
@@ -148,7 +151,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       rel="noreferrer"
                       className="text-base-content opacity-50 hover:underline"
                     >
-                      See All
+                      {t("see_all")}
                     </a>
                   )}
                 </div>

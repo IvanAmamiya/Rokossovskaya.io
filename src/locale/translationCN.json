@@ -2,5 +2,13 @@
     "app_name":"测试",
     "theme_style":"主题",
     "change_theme":"改变主题",
-    "download_resume":"下载简历"
+    "download_resume":"下载简历",
+    "my_projects":"项目经验",
+    "github_projects":"Github项目",
+    "tech_stack":"技术栈",
+    "experience":"经验",
+    "education":"教育经历",
+    "certification":"证书",
+    "see_all":"查看全部",
+    "based_in":"住处"
 }

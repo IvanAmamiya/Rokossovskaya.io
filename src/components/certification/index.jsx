@@ -1,6 +1,7 @@
 import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 const ListItem = ({ year, name, body, link }) => (
   <li className="mb-5 ml-4">
@@ -19,6 +20,7 @@ const ListItem = ({ year, name, body, link }) => (
 );
 
 const Certification = ({ certifications, loading }) => {
+  const { t, i18n } = useTranslation();
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 2; index++) {
@@ -53,7 +55,7 @@ const Certification = ({ certifications, loading }) => {
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
                   <span className="text-base-content opacity-70">
-                    Certification
+                    {t("certification")}
                   </span>
                 )}
               </h5>
