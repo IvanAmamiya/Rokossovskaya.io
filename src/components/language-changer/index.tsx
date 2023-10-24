@@ -23,7 +23,7 @@ const LanguageChanger = ({
       <div className="flex-row items-center space-x-4 flex pl-6 pr-2 py-4">
         <div className="flex-1">
           <h5 className="card-title">
-            {<span className="text-base-content opacity-70">Language</span>}
+            {<span className="text-base-content opacity-70">{t("language")}</span>}
           </h5>
           {
             <span className="text-base-content text-opacity-40 capitalize text-sm">
@@ -41,7 +41,7 @@ const LanguageChanger = ({
                 className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
               >
                 <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
-                <span className="hidden md:inline">Change Language</span>
+                <span className="hidden md:inline">{t("change_language")}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1792 1792"
