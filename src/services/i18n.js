@@ -31,7 +31,7 @@ i18next
   .init({
     resources,
 
-    lng: 'cn',
+    lng: 'en',
 
     interpolation: {
       escapeValue: false,
