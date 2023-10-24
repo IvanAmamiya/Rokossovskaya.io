@@ -102,7 +102,7 @@ const config = {
     {
       title: 'フォーラム(WeChat Program)',
       description:
-        'Uni-Appで作られたウィチャット学校フォーラムです.Vue3 MondoDBなどを使われました。画像アップロード、投稿、アルバム、WeChatユーザー認証などの機能を実現しました。',
+        'Uni-Appで作られたウィチャット学校フォーラムです.Vue3 MongoDBなどを使われました。画像アップロード、投稿、アルバム、WeChatユーザー認証などの機能を実現しました。',
       imageUrl: 'https://play-lh.googleusercontent.com/eOXYfM4C_CJc6hJ9Yxa0q0Xf-O8u03T5af6NdC5vnuYKLnrgsIjEaM4lUK3Mj7gNn7Y',
       link: '',
     },
