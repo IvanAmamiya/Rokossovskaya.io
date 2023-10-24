@@ -1,8 +1,10 @@
 import { AiOutlineControl } from 'react-icons/ai';
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
+  const { t, i18n } = useTranslation();
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);
@@ -21,7 +23,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
             {loading ? (
               skeleton({ width: 'w-20', height: 'h-8', className: 'mb-1' })
             ) : (
-              <span className="text-base-content opacity-70">Theme</span>
+              <span className="text-base-content opacity-70">{t("theme_style")}</span>
             )}
           </h5>
           <span className="text-base-content text-opacity-40 capitalize text-sm">
@@ -46,7 +48,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
                 className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
               >
                 <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
-                <span className="hidden md:inline">Change Theme</span>
+                <span className="hidden md:inline">{t("change_theme")}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1792 1792"

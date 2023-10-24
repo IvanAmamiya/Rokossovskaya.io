@@ -180,12 +180,12 @@ const config = {
       '--rounded-btn': '3rem',
     },
     languageConfig: {
-      defaultLanguage: 'English',
+      defaultLanguage: 'en',
       // Available language. To remove any theme, exclude from here.
       languages: [
-        'English',
-        'Chinese',
-        'Japanese',
+        'en',
+        'cn',
+        'jp',
       ],
     },  
   },

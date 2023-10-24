@@ -28,12 +28,12 @@ import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
 import ExternalProject from './external-project';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const bgColor = 'bg-base-300';
 
 const GitProfile = ({ config }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [error, setError] = useState(
     typeof config === 'undefined' && !config ? noConfigError : null
   );
@@ -44,14 +44,14 @@ const GitProfile = ({ config }) => {
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
-  const [language,setLanguage] = useState(null)
+  const [language, setLanguage] = useState(null);
 
   useEffect(() => {
     if (sanitizedConfig) {
       setTheme(getInitialTheme(sanitizedConfig.themeConfig));
       setupHotjar(sanitizedConfig.hotjar);
-      setLanguage(getInitialLanguage(sanitizedConfig.languageConfig))
-      console.log(sanitizedConfig)
+      setLanguage(getInitialLanguage(sanitizedConfig.languageConfig));
+      console.log(sanitizedConfig.languageConfig);
       loadData();
     }
   }, [sanitizedConfig]);
@@ -59,9 +59,7 @@ const GitProfile = ({ config }) => {
   useEffect(() => {
     theme && document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
-  useEffect(() => {
-    
-  }, [language]);
+  useEffect(() => {}, [language]);
 
   const loadData = useCallback(() => {
     axios
@@ -179,7 +177,6 @@ const GitProfile = ({ config }) => {
                         avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
                         resume={sanitizedConfig.resume}
                       />
-                      {t("app_name")}
                       {!sanitizedConfig.themeConfig.disableSwitch && (
                         <LanguageChanger
                           language={language}

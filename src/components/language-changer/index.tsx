@@ -1,17 +1,21 @@
 import { AiOutlineControl } from 'react-icons/ai';
-import { skeleton } from '../../helpers/utils';
+/* import { skeleton } from '../../helpers/utils';
+ */ 
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const LanguageChanger = ({
   language,
   setLanguage,
-  loading,
+  /* loading, */
   languageConfig,
 }) => {
+  const { t, i18n } = useTranslation();
   const changeLanguage = (e, selectedLanguage) => {
     e.preventDefault();
     setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage)
   };
   console.log(languageConfig);
   return (
@@ -24,14 +28,14 @@ const LanguageChanger = ({
           {
             <span className="text-base-content text-opacity-40 capitalize text-sm">
               {language == languageConfig.defaultLanguage
-                ? 'English'
+                ? 'en'
                 : language}
             </span>
           }{' '}
         </div>
         <div className="flex-0">
           {
-            <div title="Change Theme" className="dropdown dropdown-end">
+            <div title="Change Language" className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
@@ -65,7 +69,7 @@ const LanguageChanger = ({
                       >
                         <span className="opacity-60 capitalize">
                           {item === languageConfig.defaultLanguage
-                            ? 'English'
+                            ? 'en'
                             : item}
                         </span>
                       </a>

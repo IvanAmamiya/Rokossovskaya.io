@@ -2,21 +2,25 @@ import i18next from 'i18next';
 
 import { initReactI18next } from 'react-i18next';
 
+import TranslationCN from '../locale/TranslationCN.json';
+import TranslationEN from '../locale/TranslationEN.json';
+import TranslationJP from '../locale/TranslationJP.json';
+
 // "Inline" English and Arabic translations.
 
 // We can localize to any language and any number of languages.
 
 const resources = {
   en: {
-    translation: {
-      app_name: 'Test',
-    },
+    translation: TranslationEN,
   },
 
   cn: {
-    translation: {
-      app_name: '测试',
-    },
+    translation: TranslationCN,
+  },
+
+  jp: {
+    translation: TranslationJP,
   },
 };
 
@@ -32,6 +36,9 @@ i18next
     interpolation: {
       escapeValue: false,
     },
+  })
+  .then(function (t) {
+    t('key');
   });
 
 export default i18next;

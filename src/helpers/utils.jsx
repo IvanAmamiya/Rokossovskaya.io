@@ -26,13 +26,13 @@ export const getInitialTheme = (themeConfig) => {
   return themeConfig.defaultTheme;
 };
 export const getInitialLanguage = (languageConfig) => {
-/* todo:initialize
- */
-/*   if (themeConfig.disableSwitch) {
+  /* todo:initialize
+   */
+  /*   if (themeConfig.disableSwitch) {
     return themeConfig.defaultTheme;
   }
 
- */  /* if (
+ */ /* if (
     typeof window !== 'undefined' &&
     !(localStorage.getItem('gitprofile-theme') === null) &&
     themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
@@ -125,11 +125,7 @@ export const sanitizeConfig = (config) => {
     '--rounded-box': '3rem',
     '--rounded-btn': '3rem',
   };
-  const languages = config?.languageConfig?.languages || [
-    'English',
-    'Chinese',
-    'Japanese',
-  ];
+  const languages = config?.languageConfig?.languages || ['en', 'cn', 'jp'];
   const themes = config?.themeConfig?.themes || [
     'light',
     'dark',
@@ -220,9 +216,9 @@ export const sanitizeConfig = (config) => {
       themes: themes,
       customTheme: customTheme,
     },
-    languageConfig:{
+    languageConfig: {
       defaultLanguage: config?.languageConfig?.defaultLanguage || languages[0],
-      languages: languages
+      languages: config?.languages || languages,
     },
     footer: config?.footer,
   };

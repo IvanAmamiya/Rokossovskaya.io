@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { fallbackImage, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
+import { useTranslation } from 'react-i18next';
 
 const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="grid place-items-center py-8">
@@ -68,7 +70,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               download
               rel="noreferrer"
             >
-              Download Resume
+              {t("download_resume")}
             </a>
           ))}
       </div>
