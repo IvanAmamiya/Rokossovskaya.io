@@ -50,7 +50,7 @@ const config = {
       company: '株式会社COD',
       position: 'Front-End Engineer',
       from: 'July 2023',
-      to: 'October 2023',
+      to: 'December 2023',
       companyLink: 'https://bizcod.co.jp/',
     },
   ],
