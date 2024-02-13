@@ -47,7 +47,7 @@ const config = {
   ],
   experiences: [
     {
-      company: '株式会社COD',
+      company: '株式会社フレストソフト',
       position: 'Front-End Engineer',
       from: 'Feb. 2024',
       to: 'Recent',
