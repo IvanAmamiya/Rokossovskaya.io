@@ -48,7 +48,7 @@ const config = {
   experiences: [
     {
       company: '株式会社フレストソフト',
-      position: 'Front-End Engineer',
+      position: 'Software Engineer',
       from: 'Feb. 2024',
       to: 'Recent',
       companyLink: 'https://bizcod.co.jp/',
