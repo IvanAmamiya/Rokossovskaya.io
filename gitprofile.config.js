@@ -56,8 +56,8 @@ const config = {
   ],
   certifications: [
     {
-      name:'TOEIC英語試験',
-      body:'895スコア　獲得',
+      name:'TOEICテスト',
+      body:'895スコア 獲得',
       year:'2024'
     },
     {
