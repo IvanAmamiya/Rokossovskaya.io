@@ -49,8 +49,16 @@ const config = {
     {
       company: '株式会社COD',
       position: 'Front-End Engineer',
+      from: 'Feb. 2024',
+      to: 'Recent',
+      companyLink: 'https://bizcod.co.jp/',
+    },
+
+    {
+      company: '株式会社COD',
+      position: 'Front-End Engineer',
       from: 'July 2023',
-      to: 'December 2023',
+      to: 'Oct. 2023',
       companyLink: 'https://bizcod.co.jp/',
     },
   ],
