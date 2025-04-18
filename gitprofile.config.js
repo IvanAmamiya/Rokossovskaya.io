@@ -34,7 +34,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://drive.google.com/file/d/1QS0EHFSX7pS5gKA8b21oKlPC80qLj7-9/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
+      'https://docs.google.com/document/d/1b_7AXuMqqVp4WI6IV2HTGXO72DE-7GhXuy3m92j7dew/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Vue.js',
@@ -47,19 +47,11 @@ const config = {
   ],
   experiences: [
     {
-      company: '株式会社フレストソフト',
-      position: 'Software Engineer',
+      company: 'フレストソフト株式会社',
+      position: 'Full Stack Engineer',
       from: 'Feb. 2024',
-      to: 'Recent',
-      companyLink: 'https://bizcod.co.jp/',
-    },
-
-    {
-      company: '株式会社COD',
-      position: 'Front-End Engineer',
-      from: 'July 2023',
-      to: 'Oct. 2023',
-      companyLink: 'https://bizcod.co.jp/',
+      to: 'Dec. 2024',
+      companyLink: 'https://www.forestsoft.jp/',
     },
   ],
   certifications: [
@@ -101,11 +93,17 @@ const config = {
       from: '2017',
       to: '2021',
     },
+    {
+      institution: '広島大学',
+      degree: '修士',
+      from: '2024',
+      to: '2027',
+    }
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
-    {
+/*     {
       title: '電子商店(E-Commerce Shop)',
       description:
         'こちらは、株式会社CODでの勤務中に担当したプロジェクトです。主にVue.js、TypeScript、VueXなどを使用し、フロントエンド部分においてアカウント管理と文章機能のLaravelからVueへの移行を担当しました。さらに、RESTful APIの作成や支払いサービス提供者との連絡、中国語から日本語への翻訳も行いました。',
@@ -118,7 +116,7 @@ const config = {
         'Uni-Appで作られたウィチャット学校フォーラムです.Vue3 MongoDBなどを使われました。画像アップロード、投稿、アルバム、WeChatユーザー認証などの機能を実現しました。',
       imageUrl: 'https://play-lh.googleusercontent.com/eOXYfM4C_CJc6hJ9Yxa0q0Xf-O8u03T5af6NdC5vnuYKLnrgsIjEaM4lUK3Mj7gNn7Y',
       link: '',
-    },
+    }, */
 
   ],
   // Display blog posts from your medium or dev account. (Optional)
