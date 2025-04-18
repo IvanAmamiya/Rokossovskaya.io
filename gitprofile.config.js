@@ -90,14 +90,14 @@ const config = {
     {
       institution: '燕山大学',
       degree: '学士',
-      from: '2017',
-      to: '2021',
+      from: '2017.9',
+      to: '2021.6',
     },
     {
       institution: '広島大学',
       degree: '修士',
-      from: '2024',
-      to: '2027',
+      from: '2025.4',
+      to: '2027.4',
     }
   ],
 
