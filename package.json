@@ -11,6 +11,10 @@
   "bugs": {
     "url": "https://github.com/arifszn/gitprofile/issues"
   },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.8.0"
+  },
   "files": [
     "dist/gitprofile.es.js",
     "dist/gitprofile.umd.js",
