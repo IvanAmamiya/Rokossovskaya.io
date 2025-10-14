@@ -48,7 +48,7 @@ const config = {
   experiences: [
     {
       company: 'フレストソフト株式会社',
-      position: 'Full Stack Engineer',
+      position: 'Software Engineer',
       from: 'Feb. 2024',
       to: 'Dec. 2024',
       companyLink: 'https://www.forestsoft.jp/',

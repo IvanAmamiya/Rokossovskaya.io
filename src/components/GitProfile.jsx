@@ -70,7 +70,7 @@ const GitProfile = ({ config }) => {
           avatar: data.avatar_url,
           name: data.name ? data.name : 'Rokossovskaya',
           bio: data.bio ? data.bio : 'Front-End Developer',
-          location: data.location ? data.location : 'Chiba,Japan',
+          location: data.location ? data.location : 'Higashihiroshima,Japan',
           company: data.company ? data.company : '',
         };
 
