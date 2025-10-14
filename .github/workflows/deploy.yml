@@ -29,14 +29,8 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      # （可选）一般对前端来说 node_modules 缓存收益有限，保留也行
-      - name: Restore cache
-        uses: actions/cache@v4
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          enablement: true   # <── 自动启用 Pages（关键）
 
       - name: Install dependencies
         run: npm ci
