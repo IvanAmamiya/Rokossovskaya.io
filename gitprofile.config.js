@@ -34,7 +34,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://docs.google.com/document/d/1b_7AXuMqqVp4WI6IV2HTGXO72DE-7GhXuy3m92j7dew/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/18M5LA-kgA2vCvLQz1iXfFvBq8a6MaZoB/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Vue.js',
