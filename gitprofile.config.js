@@ -33,8 +33,7 @@ const config = {
     email: 'svnn175e@gmail.com',
   },
   resume: {
-    fileUrl:
-      'https://drive.google.com/file/d/18M5LA-kgA2vCvLQz1iXfFvBq8a6MaZoB/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Vue.js',
